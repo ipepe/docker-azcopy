@@ -9,5 +9,5 @@ RUN tar -xf /root/azcopy.tar.gz && \
     rm -rf /root/azcopy_linux_amd64_10.3.1 && \
     chmod +x /bin/azcopy /docker-entrypoint.sh
 
-ENV MODE=sync
+ENV MODE=sync SOURCE="/source"
 CMD ["/docker-entrypoint.sh"]
