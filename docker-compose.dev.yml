@@ -2,6 +2,7 @@ version: '3.3'
 services:
   server:
     build: .
+    restart: on-failure
     volumes:
       - ./data/source:/source
       - ./data/logs:/root/.azcopy
