@@ -1,0 +1,13 @@
+version: '3.3'
+services:
+  server:
+    build: .
+    volumes:
+      - ./data/source:/source
+      - ./data/logs:/root/.azcopy
+    environment:
+      MODE: 'sync'
+      SOURCE: '/source'
+      DESTINATION: 'https://storagename.blob.core.windows.net/containername?SAS_KEY'
+
+# docker-compose -f docker-compose.dev.yml up --build
